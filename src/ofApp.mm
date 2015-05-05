@@ -69,15 +69,17 @@ void ofApp::drawMarchingCubes()
     float elapsedTime = ofGetElapsedTimef();
     ofSetWindowTitle( ofToString( ofGetFrameRate() ) );
     
-    camera.begin();
+    //camera.begin();
+    
+    mc.draw();
     
     //draw the mesh
-    normalShader.begin();
+   // normalShader.begin();
     
-    normalShader.end();
+   // normalShader.end();
     
     
-    camera.end();
+   // camera.end();
 }
 
 //--------------------------------------------------------------
@@ -108,6 +110,10 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    
+    drawMarchingCubes();
+    
     ofxQCAR * qcar = ofxQCAR::getInstance();
     qcar->draw();
     
@@ -214,7 +220,7 @@ void ofApp::draw(){
     }
     
     
-    drawMarchingCubes();
+
 }
 
 //--------------------------------------------------------------
